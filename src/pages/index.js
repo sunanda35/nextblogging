@@ -1,14 +1,16 @@
-import { loadDB } from '../production/firebase'
+import { loadDB } from '../../firebase/firebase'
 import { useAmp } from 'next/amp'
+import Header from '../reusable/header/Header'
+
 export const config = {
   amp: 'hybrid',
 }
 
 export default function Index({data}) {
   const isAmp = useAmp();
-  console.log(data)
   return (
     <div>
+      <Header/>
       <h1>Fuck it</h1>
   </div>
   )
